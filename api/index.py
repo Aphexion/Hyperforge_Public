@@ -569,7 +569,8 @@ def calculate_total_balance(balance_text, position_amount_inUSDT):
     return total_balance, usdt_balance, asset_balances, locked_balances, total_asset_balances_in_usdt, position_amounts
 # The main function that takes profit when the target balance is reached.
 # Since Gate.io does not support market orders, it uses recursive limit orders to
-# sell assets at the best possible price.def take_profit_if_target_reached(total_balance, initial_balance, asset_balances, locked_balances, takeProfitTargetPercentage):
+# sell assets at the best possible price
+def take_profit_if_target_reached(total_balance, initial_balance, asset_balances, locked_balances, takeProfitTargetPercentage):
     target_balance = initial_balance * (1 + takeProfitTargetPercentage / 100)
 
     if total_balance >= target_balance:
